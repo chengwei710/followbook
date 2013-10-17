@@ -12,13 +12,11 @@ import com.conway.lohas.persistent.jdo.Role;
 import com.conway.lohas.persistent.jdo.User;
 import com.conway.lohas.services.ServicesFactory;
 import com.conway.lohas.services.UserService;
-import com.conway.lohas.services.impl.UserServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class LoginAction extends ActionSupport {
-	
-	@SuppressWarnings("unused")
+
 	private static final Logger log = Logger.getLogger(LoginAction.class.getName());
 
 	private String userName;
