@@ -83,10 +83,10 @@ public class LoginAction extends ActionSupport {
 	
 	public void validate(){
 		if(StringUtils.isBlank(userName)){
-			this.addFieldError("UserName", "User name required");
+			this.addFieldError("userName", "User name required");
 		}
 		if(StringUtils.isBlank(password)){
-			this.addFieldError("Password", "Password required");
+			this.addFieldError("password", "Password required");
 		}
 	}
 	

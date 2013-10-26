@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-    <package name="struts2" namespace="/lohas" 
-          extends="struts-default"> 
+    <package name="struts-basic" extends="struts-default"> 
           <action name="login"> 
-              <result>/member/login.jsp</result>              
+              <result>/pages/login.jsp</result>              
           </action>
            <action name="home" class="com.conway.lohas.web.action.LoginAction"> 
-              <result name="input">/lohas/login.jsp</result>
-              <result>/lohas/member/home.jsp</result>              
+              <result name="input">/pages/login.jsp</result>
+              <result name="admin" type="redirect">/admin/welcome</result>
+              <result name="user" type="redirect">/user/welcome</result>           
           </action>  
-      </package>
+     </package>
+     
+     <include file="struts-user.xml"/>
+     <include file="struts-admin.xml"/>
 </struts>
